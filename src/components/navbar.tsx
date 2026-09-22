@@ -6,6 +6,7 @@ import { useWindowScroll } from "react-use";
 
 import { LINKS, NAV_ITEMS } from "@/constants";
 import { cn } from "@/lib/utils";
+import { assetUrl } from "@/lib/assets";
 
 import { Button } from "./button";
 
@@ -62,7 +63,7 @@ export const Navbar = () => {
         <nav className="flex size-full items-center justify-between p-4">
           <div className="flex items-center gap-7">
             <a href="index.html" className="transition hover:opacity-75">
-              <img src="/img/logo.png" alt="Logo" className="w-10" />
+              <img src={assetUrl("img/logo.png")} alt="Logo" className="w-10" />
             </a>
 
             <Button
@@ -91,7 +92,7 @@ export const Navbar = () => {
               >
                 <audio
                   ref={audioElementRef}
-                  src="/audio/loop.mp3"
+                  src={assetUrl("audio/loop.mp3")}
                   className="hidden"
                   loop
                 />

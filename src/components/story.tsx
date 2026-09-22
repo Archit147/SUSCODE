@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { AnimatedTitle } from "./animated-title";
 import { Button } from "./button";
 import { RoundedCorners } from "./rounded-corners";
+import { assetUrl } from "@/lib/assets";
 
 export const Story = () => {
   const frameRef = useRef<HTMLImageElement>(null);
@@ -67,7 +68,7 @@ export const Story = () => {
                   onMouseUp={handleMouseLeave}
                   onMouseEnter={handleMouseLeave}
                   onMouseMove={handleMouseMove}
-                  src="/img/entrance.webp"
+                  src={assetUrl("img/entrance.webp")}
                   alt="Entrance"
                   className="object-contain"
                 />

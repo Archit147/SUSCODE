@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 import { AnimatedTitle } from "./animated-title";
+import { assetUrl } from "@/lib/assets";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
@@ -49,7 +50,7 @@ export const About = () => {
       <div className="h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
-            src="/img/about.webp"
+            src={assetUrl("img/about.webp")}
             alt="Background"
             className="absolute top-0 left-0 size-full object-cover"
           />
